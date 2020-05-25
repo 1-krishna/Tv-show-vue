@@ -9,5 +9,7 @@ module.exports = {
     '!**/tests/e2e/**',
     '!**/main.js',
     '!**/coverage/**',
+    "!src/*/vuetify.js",
+    "!src/router/index.js"
   ]
 }

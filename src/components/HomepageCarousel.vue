@@ -1,10 +1,8 @@
 <template>
   <v-carousel interval="2000" cycle height="500" hide-delimiter-background show-arrows-on-hover>
-    <!-- <v-carousel-item v-for="(slide, i) in slides" :key="i"> -->
     <v-carousel-item v-for="(show, idx) in topFive" :key="idx">
       <v-sheet color="black lighten-3" height="100%">
         <v-row class="fill-height" align="center" justify="center">
-          <!-- <div class="display-3">{{ slide }} Slide</div> -->
           <CarouselItem :imageSrc="show.image.original" :showName="show.name" :id="show.id" />
         </v-row>
       </v-sheet>
@@ -39,7 +37,6 @@ export default {
   },
   watch: {
     dataAvailable(newValue) {
-      console.log(newValue);
       if (newValue) {
         this.bringTopFiveShows();
       }

@@ -35,7 +35,6 @@ export default {
   },
   watch: {
     dataAvailable(newValue) {
-      console.log(newValue);
       if (newValue) {
         this.bringGenreWiseShows();
       }

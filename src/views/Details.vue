@@ -1,6 +1,5 @@
 <template>
   <v-container v-if="Object.keys(detailedData).length != 0" class="black lighten-5" fluid>
-    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
     <v-row>
       <v-col cols="12">
         <v-card dark class="pa-2 text-center">
@@ -71,7 +70,6 @@ export default {
     fetchDetailedData() {
       getShowById(this.id).then(response => {
         this.detailedData = response;
-        console.log(this.detailedData);
       });
     }
   }

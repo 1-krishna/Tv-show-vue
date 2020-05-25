@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     details(id) {
-      this.$router.replace({ name: "Details", params: { id: id } });
+      this.$router.push({ path: `/details/${id}` });
     }
   }
 };
